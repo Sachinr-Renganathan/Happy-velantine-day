@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SachinKiruthika</title>
+<style>
+  /* Valentine's Day Special CSS - Enhanced Version - Sachin & Kiruthika */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #ffecd2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+    animation: gradientShift 15s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Animated floating hearts background */
+.heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+body::before {
+    content: '💕 💖 💗 ❤️ 💓 💞 💝 ❣️';
+    position: fixed;
+    top: -50px;
+    left: 0;
+    width: 200%;
+    font-size: 40px;
+    animation: floatHearts 20s linear infinite;
+    opacity: 0.15;
+    letter-spacing: 100px;
+    z-index: 0;
+}
+
+body::after {
+    content: '💕 💖 💗 ❤️ 💓 💞 💝 ❣️';
+    position: fixed;
+    bottom: -50px;
+    right: 0;
+    width: 200%;
+    font-size: 35px;
+    animation: floatHearts 25s linear infinite reverse;
+    opacity: 0.15;
+    letter-spacing: 80px;
+    z-index: 0;
+}
+
+@keyframes floatHearts {
+    0% { transform: translateX(0) translateY(0) rotate(0deg); }
+    100% { transform: translateX(-50%) translateY(-30px) rotate(360deg); }
+}
+
+/* Main content wrapper */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Container for content */
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(216, 27, 96, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Main heading styles */
+h1 {
+    text-align: center;
+    background: linear-gradient(45deg, #ff6b9d, #c44569, #ff6b9d, #c44569);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    margin: 30px 0;
+    text-shadow: 0 0 30px rgba(255, 107, 157, 0.5);
+    animation: pulse 2s infinite, gradientMove 5s ease infinite;
+    letter-spacing: 3px;
+    font-weight: 700;
+    position: relative;
+}
+
+h1::before,
+h1::after {
+    content: '✨';
+    position: absolute;
+    font-size: 0.5em;
+    animation: sparkle 2s infinite;
+}
+
+h1::before {
+    left: -50px;
+    animation-delay: 0s;
+}
+
+h1::after {
+    right: -50px;
+    animation-delay: 1s;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+@keyframes gradientMove {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Section headings */
+h2 {
+    color: #c2185b;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+h2::before,
+h2::after {
+    content: '💕';
+    margin: 0 20px;
+    font-size: 0.9em;
+    animation: heartbeat 1.5s infinite;
+}
+
+h2::before {
+    animation-delay: 0s;
+}
+
+h2::after {
+    animation-delay: 0.75s;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.3); }
+    50% { transform: scale(1); }
+}
+
+/* Decorative line under h2 */
+h2 + * {
+    margin-top: 0;
+}
+
+/* Section divider */
+h2::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #f48fb1, transparent);
+}
+
+h3 {
+    color: #e91e63;
+    font-size: 1.8em;
+    margin: 30px 0 20px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h4 {
+    color: #ad1457;
+    font-size: 1.5em;
+    margin: 25px 0;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+    animation: fadeInUp 1.5s ease;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Image styling with photo frame effect */
+img {
+    display: block;
+    margin: 40px auto;
+    border: 10px solid #fff;
+    border-radius: 15px;
+    box-shadow: 
+        0 10px 40px rgba(216, 27, 96, 0.4),
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: all 0.5s ease;
+    position: relative;
+    animation: photoReveal 1.5s ease;
+}
+
+@keyframes photoReveal {
+    from { opacity: 0; transform: scale(0.8) rotate(-5deg); }
+    to { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+img:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 
+        0 20px 60px rgba(216, 27, 96, 0.6),
+        inset 0 0 30px rgba(255, 255, 255, 0.7);
+    border-color: #ffc0cb;
+}
+
+/* Video styling with glowing effect */
+video {
+    display: block;
+    margin: 40px auto;
+    border: 8px solid #fff;
+    border-radius: 20px;
+    box-shadow: 
+        0 15px 50px rgba(233, 30, 99, 0.5),
+        0 0 40px rgba(244, 143, 177, 0.3);
+    background: #000;
+    transition: all 0.4s ease;
+    animation: videoAppear 1.5s ease;
+}
+
+@keyframes videoAppear {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+video:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 20px 60px rgba(233, 30, 99, 0.7),
+        0 0 60px rgba(244, 143, 177, 0.5);
+}
+
+/* Pre and list styling with card effect */
+pre {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 240, 245, 0.9));
+    padding: 35px;
+    border-radius: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    border: 2px solid rgba(244, 143, 177, 0.3);
+    position: relative;
+    animation: cardSlideIn 1s ease;
+}
+
+@keyframes cardSlideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+pre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #f48fb1, #f06292, #ec407a);
+    border-radius: 20px 0 0 20px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    color: #880e4f;
+    font-size: 1.15em;
+    line-height: 2;
+    margin: 20px 0;
+    position: relative;
+    padding-left: 40px;
+    font-weight: 400;
+    animation: listFadeIn 1s ease backwards;
+}
+
+li:nth-child(1) { animation-delay: 0.2s; }
+li:nth-child(2) { animation-delay: 0.4s; }
+li:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes listFadeIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+li::before {
+    content: '❤️';
+    position: absolute;
+    left: 0;
+    font-size: 1.3em;
+    animation: heartPulse 2s infinite;
+}
+
+@keyframes heartPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Special styling for the final "I Love You" heading */
+body > h1:last-of-type {
+    background: linear-gradient(
+        45deg,
+        #ff0844 0%,
+        #ff006a 25%,
+        #ff5757 50%,
+        #ff006a 75%,
+        #ff0844 100%
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 4.5em;
+    margin: 60px 0 40px 0;
+    animation: pulse 2s infinite, gradientMove 4s ease infinite, glow 3s ease infinite;
+    text-shadow: 0 0 80px rgba(255, 8, 68, 0.8);
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+
+@keyframes glow {
+    0%, 100% { filter: drop-shadow(0 0 20px rgba(255, 8, 68, 0.6)); }
+    50% { filter: drop-shadow(0 0 40px rgba(255, 8, 68, 0.9)); }
+}
+
+body > h1:last-of-type::before,
+body > h1:last-of-type::after {
+    content: '💖';
+    position: absolute;
+    font-size: 0.6em;
+    animation: heartFloat 3s infinite ease-in-out;
+}
+
+body > h1:last-of-type::before {
+    left: -80px;
+    animation-delay: 0s;
+}
+
+body > h1:last-of-type::after {
+    right: -80px;
+    animation-delay: 1.5s;
+}
+
+@keyframes heartFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+/* Fade in animation for all content */
+body > * {
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    h1::before,
+    h1::after {
+        display: none;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+    
+    h3 {
+        font-size: 1.5em;
+    }
+    
+    h4 {
+        font-size: 1.2em;
+    }
+    
+    body > h1:last-of-type {
+        font-size: 3em;
+    }
+    
+    body > h1:last-of-type::before,
+    body > h1:last-of-type::after {
+        display: none;
+    }
+    
+    img, video {
+        max-width: 90%;
+        height: auto;
+    }
+    
+    pre {
+        padding: 20px;
+    }
+    
+    li {
+        font-size: 1em;
+        padding-left: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+    }
+    
+    body > h1:last-of-type {
+        font-size: 2.5em;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+    background: rgba(244, 143, 177, 0.5);
+    color: #880e4f;
+}
+
+::-moz-selection {
+    background: rgba(244, 143, 177, 0.5);
+    color: #880e4f;
+}
+</style>
+
+</head>
+
+<body>
+    <h1>Sachin💜Kiruthika</h1>
+    <h2>Ours first meet😇</h2>
+    <img src="/for mine/source/IMG_firstpuc_121247.jpg" alt="image not foun" height="275px" width="150px" aria-controls="">
+    <pre>
+        <ul>
+            <li>Our first meet ,full of excitment and fearness overloaded
+but our faces shows a full of love with nervousness , fear and
+ect.,,</li>
+<li>our first meet is always the best 🥰</li>
+        </ul>
+    </pre>
+    <h2>Valentine's Day💞 (2026)</h2>
+    <H3>Small gift for you 🎁</H3>
+    <video src="/for mine/source/WhatsApp Video 2026-02-12 at 3.02.27 PM.mp4" height="250" width="175" controls>For
+        you</video>
+    <pre>
+        Sorry for digital gift 🙇‍♂️, very soon it can on your hand🫴,
+        we both always together like earings🫂.
+    </pre>
+    <h4>Miss you so much🥹</h4>
+    <h4>Meet you soon😘</h4>
+    <h1>I Love You Ammu</h1>
+</body>
+
+</html> 
